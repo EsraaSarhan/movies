@@ -1,0 +1,38 @@
+<div class="container movies-list">
+    <div class="row"  *ngIf="isBusy">
+        <div class="col-12 text-center">
+            <mat-spinner></mat-spinner>
+        </div>
+    </div>
+
+    <div class="row search-container">
+        <div class="col-12 text-right">
+            <app-search-bar  (moviesListEvent)="receiveMoviesListResult($event)"></app-search-bar>
+        </div>
+    </div>
+
+    <div class="row" *ngIf="isEmpty">
+        <div class="col-12">
+            <div class="alert alert-warning" role="alert">
+                No Movies 
+              </div>
+        </div>
+    </div>
+
+    <div class="row" *ngFor="let genresList  of groupedMoviesList">
+        <div class="col-12">
+            <h1 class="genres-name">{{genresList.genres}}</h1>
+        </div>
+        <div class="col-3 col-xs-12" *ngFor="let movie  of genresList.movies">
+            <mat-card class="card movie-card"  (click)="goToMovieDetails(movie)">
+                <img mat-card-image src='{{movie.backdrop}}' alt='{{movie.title}}' class="card-img-top">
+                <mat-card-content class="card-body p-0">
+                    <p class="card-text" title=" {{movie.title}}">
+                        {{movie.title}}
+                    </p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+         
+     </div>
+  </div>

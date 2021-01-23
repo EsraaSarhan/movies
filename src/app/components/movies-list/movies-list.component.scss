@@ -1,0 +1,44 @@
+.movies-list{
+    .genres-name{
+        margin: 10px 0;
+        font-weight: bold;
+        font-family: cursive;
+        font-size: 30px;
+    }
+    .search-container{
+        margin-top: 50px;
+      .mat-form-field-underline{
+            background-color: red;
+            height: 5px;
+        }
+    }
+    .movie-card{
+        border: solid;
+        margin: auto;
+        margin-bottom: 15px;
+        cursor: pointer;
+        &:hover{
+            box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+        }
+    }
+    .card-text{
+        color: #313131;
+        margin: 15px 0 0;
+        font-size: 16px;
+        display: inline-block;
+        max-width: 90%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 1.6rem;
+        position: relative;
+
+    }
+    .card-img-top{
+        margin:0;
+        width: 100%;
+    }
+    .mat-progress-spinner circle, .mat-spinner circle {
+        stroke: #8c8c8c;
+    }
+}

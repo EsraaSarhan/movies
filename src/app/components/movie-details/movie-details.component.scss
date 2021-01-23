@@ -1,0 +1,29 @@
+.back-btn{
+margin-top: 50px;
+}
+.movie-details-container{
+    margin-top: 50px;
+    font-family: monospace;
+    .movie-name{
+        
+    font-weight: bold;
+    font-size: 22px;
+    }
+    .movie-info{
+        font-size: 18px;
+        margin-right: 5px;
+    }
+    .movie-info-container{
+        margin-bottom: 10px;
+    }
+    .cast{
+        font-weight: bold;
+    font-size: 16px;
+    }
+    .cast-name{
+    font-size: 16px;
+    }
+    .movie-desc{
+        font-size: 15px;
+    }
+}
